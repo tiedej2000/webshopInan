@@ -153,6 +153,7 @@ header nav img {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 100px;
 }
 .collection__werke2 .card__werke2 {
   height: auto;
