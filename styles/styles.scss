@@ -1,0 +1,231 @@
+:root{
+    --white: white;
+    --black: black;
+}
+
+@font-face {
+    font-family: 'NBInternational';
+    src: url('../media/font/NB International Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+$fontNB: 'NBInternational', sans-serif;
+$fontManrope: "Manrope", sans-serif;
+$fontPoppins: "Poppins", sans-serif;
+$fontInter: "Inter", sans-serif;
+
+body{
+    font-family: $fontNB;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 20px;
+
+    position: relative;
+
+    &.product-view-active{
+        overflow-y: hidden;
+        pointer-events: none;
+    }
+}
+
+header{
+    nav{
+        height: 90px;
+        padding: 25px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.collection__werke{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card__werke{
+        height: auto;
+        width: calc(25% - 15px);
+        cursor: pointer;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .img__werke{
+                margin-bottom: 10px;
+            }
+    
+            .title__werke{
+                font-family: $fontNB;
+                font-size: 12px;
+                text-transform: uppercase;
+    
+                color: #000000;
+            }
+    
+            .name__werke{
+                font-family: $fontManrope;
+                color: #050505;
+                font-size: 14px;
+                font-weight: 400;
+            }
+    
+            .price__werke{
+                font-family: $fontNB;
+                font-size: 14px;
+    
+                color: #535353;
+            }
+        }
+        
+    }
+}
+
+.werke-preview{
+    position: absolute;
+    
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    transform: translateX(100%);
+    visibility: hidden;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+
+    &.active{
+        transform: translateX(0);
+        visibility: visible;
+        pointer-events: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .werk{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .close-btn{
+            display: flex;
+            align-items: center;
+            height: auto;
+            gap: 5px;
+            line-height: 1;
+            cursor: pointer;
+
+            svg{
+                height: 18px;
+                width: 18px;
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .img__werke{
+                margin-bottom: 10px;
+            }
+        }
+
+        .description{
+            font-family: $fontManrope;
+            font-size: 16px;
+        }
+
+        .anfrage{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            input{
+                width: 100%;
+                padding: 8px 8px;
+            }
+
+            .anfrage-btn{
+                width: 100%;
+                display: grid;
+                place-content: center;
+                padding: 8px 8px;
+                display: flex;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+                font-family: $fontPoppins;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+
+                &:hover{
+                  background-color: #1a1a1a;
+                }
+            }
+        }
+    }
+}
+
+.collection__werke2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card__werke2{
+        height: auto;
+        width: calc(25% - 15px);
+        margin-top: 20px;
+
+        ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 2px;
+
+            .img__werke2{
+                margin-bottom: 10px;
+            }
+    
+            .title__werke2{
+                font-family: $fontNB;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+    
+                color: #000000;
+            }
+    
+            .name__werke2{
+                font-family: $fontManrope;
+                color: #050505;
+                font-size: 14px;
+                font-weight: 400;
+                text-align: center;
+            }
+    
+            .price__werke2{
+                font-family: $fontNB;
+                font-size: 14px;
+    
+                color: #535353;
+                text-align: center;
+            }
+        }
+        
+    }
+}
